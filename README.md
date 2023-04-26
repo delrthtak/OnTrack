@@ -1,7 +1,10 @@
 # OnTrack
  Project for CS487
 Kaitlyn Krupa
+
 ---------------------------------------------------------------------------------------------------- First Commit ---------------------------------------------
+
+
 Home Tab
  Waiting to complete the rest before making any other functions other than weather display work right now
 
@@ -16,4 +19,6 @@ Health Tab
  
 Settings Page still needs to be completed
 Need Menu on each Activity but kinda just waiting to finish the main one to copy and paste. Could inherit somehow maybe but i dont care right now. 
+
+
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
