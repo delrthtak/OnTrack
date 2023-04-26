@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button_SearchDue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/go"
+        app:layout_constraintBottom_toBottomOf="@+id/text_SearchDue"
+        app:layout_constraintEnd_toEndOf="@+id/button_SearchKey"
+        app:layout_constraintStart_toStartOf="@+id/button_SearchKey"
+        app:layout_constraintTop_toTopOf="@+id/text_SearchDue"
+        tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/button_CreateNew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:onClick="onPressed"
+        android:text="@string/create_new_assignment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rec_Filtered"
+        app:layout_constraintStart_toStartOf="@+id/rec_Filtered" />
+
+    <Button
+        android:id="@+id/button_SearchKey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/go"
+        app:layout_constraintBottom_toBottomOf="@+id/text_SearchKey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_SearchKey"
+        app:layout_constraintTop_toTopOf="@+id/text_SearchKey"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/text_SearchKey"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:editable="true"
+        android:ems="10"
+        android:hint="@string/search_by_keyword_class_or_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/text_SearchDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/search_by_due_date"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/text_SearchKey"
+        app:layout_constraintStart_toStartOf="@+id/text_SearchKey"
+        app:layout_constraintTop_toBottomOf="@+id/text_SearchKey" />
+
+    <RadioGroup
+        android:id="@+id/rad_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/rad_Priority"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_SearchDue">
+
+        <RadioButton
+            android:id="@+id/rad_Earliest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusedByDefault="true"
+            android:text="@string/earliest_to_latest_due" />
+
+        <RadioButton
+            android:id="@+id/rad_Latest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_to_earliest_due" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rad_Priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/rad_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rad_Date"
+        app:layout_constraintTop_toTopOf="@+id/rad_Date">
+
+        <RadioButton
+            android:id="@+id/rad_Highest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/highest_to_lowest_priority" />
+
+        <RadioButton
+            android:id="@+id/rad_Lowest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lowest_to_highest_priority" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_UpcomingAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/upcoming_assignments"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rad_Date" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_Filtered"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_CreateNew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_UpcomingAssignment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

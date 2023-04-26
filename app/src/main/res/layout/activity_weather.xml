@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/aw_CityState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="City, State"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aw_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="time and date"
+        app:layout_constraintEnd_toEndOf="@+id/aw_CityState"
+        app:layout_constraintStart_toStartOf="@+id/aw_CityState"
+        app:layout_constraintTop_toBottomOf="@+id/aw_CityState" />
+
+    <TextView
+        android:id="@+id/aw_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="40*F"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/aw_Image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Time" />
+
+    <TextView
+        android:id="@+id/aw_Feels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Feels like:"
+        app:layout_constraintEnd_toEndOf="@+id/aw_Temp"
+        app:layout_constraintStart_toStartOf="@+id/aw_Temp"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Temp" />
+
+    <TextView
+        android:id="@+id/aw_Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Sunny"
+        app:layout_constraintEnd_toEndOf="@+id/aw_Image"
+        app:layout_constraintStart_toStartOf="@+id/aw_Image"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Image" />
+
+    <ImageView
+        android:id="@+id/aw_Image"
+        android:layout_width="93dp"
+        android:layout_height="78dp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_Temp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_Temp"
+        app:layout_constraintTop_toTopOf="@+id/aw_Temp"
+        app:srcCompat="@mipmap/_01d" />
+
+    <TextView
+        android:id="@+id/aw_6amTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="34"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/aw_1pmTemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Description" />
+
+    <TextView
+        android:id="@+id/aw_1pmTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="40"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_6amTemp"
+        app:layout_constraintEnd_toStartOf="@+id/aw_5pmTemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_6amTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_6amTemp" />
+
+    <TextView
+        android:id="@+id/aw_5pmTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_1pmTemp"
+        app:layout_constraintEnd_toStartOf="@+id/aw_11pmTemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_1pmTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_1pmTemp" />
+
+    <TextView
+        android:id="@+id/aw_11pmTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="38"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_5pmTemp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/aw_5pmTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_5pmTemp" />
+
+    <TextView
+        android:id="@+id/aw_6am"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="6am"
+        app:layout_constraintEnd_toEndOf="@+id/aw_6amTemp"
+        app:layout_constraintStart_toStartOf="@+id/aw_6amTemp"
+        app:layout_constraintTop_toBottomOf="@+id/aw_6amTemp" />
+
+    <TextView
+        android:id="@+id/aw_1pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1pm"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_6am"
+        app:layout_constraintEnd_toEndOf="@+id/aw_1pmTemp"
+        app:layout_constraintStart_toStartOf="@+id/aw_1pmTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_6am" />
+
+    <TextView
+        android:id="@+id/aw_5pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5pm"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_1pm"
+        app:layout_constraintEnd_toEndOf="@+id/aw_5pmTemp"
+        app:layout_constraintStart_toStartOf="@+id/aw_5pmTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_1pm" />
+
+    <TextView
+        android:id="@+id/aw_11pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11pm"
+        app:layout_constraintBottom_toBottomOf="@+id/aw_5pm"
+        app:layout_constraintEnd_toEndOf="@+id/aw_11pmTemp"
+        app:layout_constraintStart_toStartOf="@+id/aw_11pmTemp"
+        app:layout_constraintTop_toTopOf="@+id/aw_5pm" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aw_Rec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aw_6am" />
+
+    <TextView
+        android:id="@+id/aw_Sunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Sunrise: "
+        app:layout_constraintEnd_toEndOf="@+id/aw_Rec"
+        app:layout_constraintTop_toTopOf="@+id/aw_Humidity" />
+
+    <TextView
+        android:id="@+id/aw_Sunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunset: "
+        app:layout_constraintStart_toStartOf="@+id/aw_Sunrise"
+        app:layout_constraintTop_toTopOf="@+id/aw_UVI" />
+
+    <TextView
+        android:id="@+id/aw_Humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:text="Humidity: "
+        app:layout_constraintStart_toStartOf="@+id/aw_Rec"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Rec" />
+
+    <TextView
+        android:id="@+id/aw_UVI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="UV Index:"
+        app:layout_constraintStart_toStartOf="@+id/aw_Humidity"
+        app:layout_constraintTop_toBottomOf="@+id/aw_Humidity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

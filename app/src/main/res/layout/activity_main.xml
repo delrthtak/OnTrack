@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_CityState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/city_state"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_Temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_70"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_Image"
+        app:layout_constraintEnd_toStartOf="@+id/img_Image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_Image" />
+
+    <ImageView
+        android:id="@+id/img_Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_Temp"
+        app:layout_constraintTop_toBottomOf="@+id/text_CityState"
+        app:srcCompat="@mipmap/_01d"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/text_WeatherDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/weather_description"
+        app:layout_constraintEnd_toEndOf="@+id/img_Image"
+        app:layout_constraintStart_toStartOf="@+id/img_Image"
+        app:layout_constraintTop_toBottomOf="@+id/img_Image" />
+
+    <TextView
+        android:id="@+id/text_UpcomingAssignments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/upcoming_assignments"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_UpdateWater" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_Up"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_UpcomingAssignments" />
+
+    <TextView
+        android:id="@+id/text_NumberOfCups"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/_3"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toStartOf="@+id/text_NumberOfMinutes"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_WeatherDescription" />
+
+    <TextView
+        android:id="@+id/text_NumberOfMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_75"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_NumberOfCups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_NumberOfCups"
+        app:layout_constraintTop_toTopOf="@+id/text_NumberOfCups" />
+
+    <TextView
+        android:id="@+id/text_CupsOfWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cups_of_water"
+        app:layout_constraintEnd_toEndOf="@+id/text_NumberOfCups"
+        app:layout_constraintStart_toStartOf="@+id/text_NumberOfCups"
+        app:layout_constraintTop_toBottomOf="@+id/text_NumberOfCups" />
+
+    <TextView
+        android:id="@+id/text_MinutesOfActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minutes_of_activity"
+        app:layout_constraintBottom_toBottomOf="@+id/text_CupsOfWater"
+        app:layout_constraintEnd_toEndOf="@+id/text_NumberOfMinutes"
+        app:layout_constraintStart_toStartOf="@+id/text_NumberOfMinutes"
+        app:layout_constraintTop_toTopOf="@+id/text_CupsOfWater" />
+
+    <Button
+        android:id="@+id/button_UpdateWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/update"
+        app:layout_constraintEnd_toEndOf="@+id/text_CupsOfWater"
+        app:layout_constraintStart_toStartOf="@+id/text_CupsOfWater"
+        app:layout_constraintTop_toBottomOf="@+id/text_CupsOfWater"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/button_UpdateMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="@+id/button_UpdateWater"
+        app:layout_constraintEnd_toEndOf="@+id/text_MinutesOfActivity"
+        app:layout_constraintStart_toStartOf="@+id/text_MinutesOfActivity"
+        app:layout_constraintTop_toTopOf="@+id/button_UpdateWater" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

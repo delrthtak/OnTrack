@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ah_WaterGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/_3_5"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/ah_CupsOfWater"
+        app:layout_constraintStart_toStartOf="@+id/ah_CupsOfWater"
+        app:layout_constraintTop_toBottomOf="@+id/ah_TextDailyGoals" />
+
+    <TextView
+        android:id="@+id/ah_ActvivtyGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_55_100"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/ah_MinutesOfActivity"
+        app:layout_constraintStart_toStartOf="@+id/ah_MinutesOfActivity"
+        app:layout_constraintTop_toTopOf="@+id/ah_WaterGoal" />
+
+    <TextView
+        android:id="@+id/ah_CupsOfWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cups_of_water"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/ah_MinutesOfActivity"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ah_WaterGoal" />
+
+    <TextView
+        android:id="@+id/ah_MinutesOfActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/minutes_of_activity"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_CupsOfWater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ah_CupsOfWater"
+        app:layout_constraintTop_toTopOf="@+id/ah_CupsOfWater" />
+
+    <Button
+        android:id="@+id/ah_AddWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_water"
+        app:layout_constraintEnd_toEndOf="@+id/ah_CupsOfWater"
+        app:layout_constraintStart_toStartOf="@+id/ah_CupsOfWater"
+        app:layout_constraintTop_toBottomOf="@+id/ah_CupsOfWater" />
+
+    <Button
+        android:id="@+id/ah_AddActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/add_activity"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_AddWater"
+        app:layout_constraintEnd_toEndOf="@+id/ah_MinutesOfActivity"
+        app:layout_constraintStart_toStartOf="@+id/ah_MinutesOfActivity"
+        app:layout_constraintTop_toTopOf="@+id/ah_AddWater" />
+
+    <TextView
+        android:id="@+id/ah_TextDailyGoals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/daily_goals"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ah_Rec"
+        android:layout_width="412dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ah_Spinner" />
+
+    <TextView
+        android:id="@+id/ah_TextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/time"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <TextView
+        android:id="@+id/ah_TextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ah_TextTime"
+        app:layout_constraintTop_toBottomOf="@+id/ah_TextTime" />
+
+    <TextView
+        android:id="@+id/ah_TextKeyword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/keyword"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/ah_TextDate"
+        app:layout_constraintTop_toBottomOf="@+id/ah_TextDate" />
+
+    <TextView
+        android:id="@+id/ah_TextHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/history"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/ah_AddActivity"
+        app:layout_constraintStart_toStartOf="@+id/ah_AddActivity"
+        app:layout_constraintTop_toBottomOf="@+id/ah_AddActivity" />
+
+    <Spinner
+        android:id="@+id/ah_Spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_TextHistory"
+        app:layout_constraintEnd_toStartOf="@+id/ah_TextHistory"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/ah_AddWater"
+        app:layout_constraintTop_toTopOf="@+id/ah_TextHistory"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/ah_Search"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ah_Clear"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/ah_Clear"
+        app:layout_constraintTop_toBottomOf="@+id/ah_Clear" />
+
+    <Button
+        android:id="@+id/ah_Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toTopOf="@+id/ah_Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ah_Rec" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="121dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="560dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/ah_Minutes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_TextTime"
+        app:layout_constraintEnd_toStartOf="@+id/ah_Clear"
+        app:layout_constraintStart_toEndOf="@+id/ah_TextTime"
+        app:layout_constraintTop_toTopOf="@+id/ah_TextTime"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/ah_Start"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:ems="10"
+        android:hint="@string/start"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_TextDate"
+        app:layout_constraintEnd_toStartOf="@+id/ah_End"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ah_TextDate"
+        app:layout_constraintTop_toTopOf="@+id/ah_TextDate"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/ah_End"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:hint="@string/end"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_Start"
+        app:layout_constraintEnd_toEndOf="@+id/ah_Minutes"
+        app:layout_constraintEnd_toStartOf="@+id/ah_Search"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ah_Start"
+        app:layout_constraintTop_toTopOf="@+id/ah_Start"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/ah_Keyword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="@string/keywordjjjjj"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_TextKeyword"
+        app:layout_constraintEnd_toEndOf="@+id/ah_End"
+        app:layout_constraintStart_toEndOf="@+id/ah_TextKeyword"
+        app:layout_constraintTop_toTopOf="@+id/ah_TextKeyword"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
