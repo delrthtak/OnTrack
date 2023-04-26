@@ -1,2 +1,19 @@
 # OnTrack
  Project for CS487
+Kaitlyn Krupa
+---------------------------------------------------------------------------------------------------- First Commit ---------------------------------------------
+Home Tab
+ Waiting to complete the rest before making any other functions other than weather display work right now
+
+Weather Tab 
+ Essentially complete, it's just not pretty.
+ 
+Assignment Tab
+ Still need to figure out how to get the JSON working, might test to see if the recycler is even functioning right. If anything we can possibly skip the JSON fun for the presentation? Needs investigating
+ 
+Health Tab
+ The layout is still skewed at the bottom and none of the buttons work yet, also don't have JSON set up to store 
+ 
+Settings Page still needs to be completed
+Need Menu on each Activity but kinda just waiting to finish the main one to copy and paste. Could inherit somehow maybe but i dont care right now. 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
