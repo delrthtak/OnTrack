@@ -26,8 +26,3 @@ Need Menu on each Activity but kinda just waiting to finish the main one to copy
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-First Update
-
-Health tab layout issue fixed (all functions visible now)
-
