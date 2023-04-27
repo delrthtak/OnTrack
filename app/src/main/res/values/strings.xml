@@ -45,4 +45,14 @@
     <string name="start">Start</string>
     <string name="end">End</string>
     <string name="keywordjjjjj">Keyword</string>
+    <string name="home">Home</string>
+    <string name="assignments">Assignments</string>
+    <string name="weather">Weather</string>
+    <string name="health_center">Health Center</string>
+    <string name="settings">Settings</string>
+    <string name="health.json">healthFileName</string>
+    <string name="new_activity">New Activity</string>
+    <string name="run_walk_cycling_weights">Run, Walk, Cycling, Weights</string>
+    <string name="activity_notes">Activity Notes</string>
+    <string name="edit_activity">Edit Activity</string>
 </resources>

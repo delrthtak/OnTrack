@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/aa_NewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/new_activity"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/aa_TextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/name"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/aa_NewActivity"
+        app:layout_constraintTop_toBottomOf="@+id/aa_NewActivity" />
+
+    <TextView
+        android:id="@+id/aa_TextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/date"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/aa_TextName"
+        app:layout_constraintTop_toBottomOf="@+id/aa_TextName" />
+
+    <TextView
+        android:id="@+id/aa_TextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/time"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/aa_TextDate"
+        app:layout_constraintTop_toBottomOf="@+id/aa_TextDate" />
+
+    <EditText
+        android:id="@+id/aa_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/run_walk_cycling_weights"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/aa_TextName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/aa_TextName"
+        app:layout_constraintTop_toTopOf="@+id/aa_TextName"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/aa_Date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="@+id/aa_TextDate"
+        app:layout_constraintEnd_toEndOf="@+id/aa_Name"
+        app:layout_constraintStart_toEndOf="@+id/aa_TextDate"
+        app:layout_constraintTop_toTopOf="@+id/aa_TextDate"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/aa_Time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/minutes"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/aa_TextTime"
+        app:layout_constraintEnd_toEndOf="@+id/aa_Date"
+        app:layout_constraintStart_toEndOf="@+id/aa_TextTime"
+        app:layout_constraintTop_toTopOf="@+id/aa_TextTime"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/aa_TextActivityNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp"
+        android:text="@string/activity_notes"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/aa_NewActivity"
+        app:layout_constraintTop_toBottomOf="@+id/aa_TextTime" />
+
+    <EditText
+        android:id="@+id/aa_ActivityNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#CCE8FD"
+        android:editable="true"
+        android:ems="10"
+        android:gravity="start|top"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/aa_AddAssignment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aa_TextActivityNotes"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/aa_AddAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClick"
+        android:text="@string/add_activity"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

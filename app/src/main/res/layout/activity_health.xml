@@ -65,6 +65,7 @@
         android:id="@+id/ah_AddActivity"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:onClick="addActivity"
         android:text="@string/add_activity"
         app:layout_constraintBottom_toBottomOf="@+id/ah_AddWater"
         app:layout_constraintEnd_toEndOf="@+id/ah_MinutesOfActivity"
@@ -87,7 +88,8 @@
         android:layout_width="412dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/ah_Minutes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ah_Spinner" />
@@ -97,31 +99,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
         android:text="@string/time"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline2" />
+        app:layout_constraintBottom_toTopOf="@+id/ah_TextDate"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/ah_TextDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
         android:text="@string/date"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/ah_TextTime"
-        app:layout_constraintTop_toBottomOf="@+id/ah_TextTime" />
+        app:layout_constraintBottom_toTopOf="@+id/ah_TextKeyword"
+        app:layout_constraintStart_toStartOf="@+id/ah_TextTime" />
 
     <TextView
         android:id="@+id/ah_TextKeyword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
         android:text="@string/keyword"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/ah_TextDate"
-        app:layout_constraintTop_toBottomOf="@+id/ah_TextDate" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ah_TextDate" />
 
     <TextView
         android:id="@+id/ah_TextHistory"
@@ -150,7 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/search"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/ah_Keyword"
         app:layout_constraintEnd_toEndOf="@+id/ah_Clear"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/ah_Clear"
@@ -164,19 +166,7 @@
         android:text="@string/clear"
         app:layout_constraintBottom_toTopOf="@+id/ah_Search"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ah_Rec" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginEnd="411dp"
-        android:layout_marginBottom="121dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintGuide_begin="560dp"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/ah_Minutes" />
 
     <EditText
         android:id="@+id/ah_Minutes"

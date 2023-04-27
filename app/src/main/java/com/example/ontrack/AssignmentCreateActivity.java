@@ -4,12 +4,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.text.method.ScrollingMovementMethod;
 import android.util.JsonWriter;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -26,7 +23,7 @@ import java.io.InputStream;
 import java.io.OutputStreamWriter;
 import java.util.List;
 
-public class CreateActivity extends AppCompatActivity {
+public class AssignmentCreateActivity extends AppCompatActivity {
 
     public static final String TAG = "CreateActivity";
 
@@ -40,6 +37,7 @@ public class CreateActivity extends AppCompatActivity {
     private RadioButton low;
     private RadioButton medium;
     private RadioButton high;
+    private Button submit;
 
     private List<Assignment> assignmentList = MainActivity.getList();
 
@@ -52,7 +50,7 @@ public class CreateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
 
-        Button submit = findViewById(R.id.button_AddAssignment);
+        submit = findViewById(R.id.button_AddAssignment);
 
         name = findViewById(R.id.edit_Name);
         date = findViewById(R.id.edit_Date);
@@ -163,14 +161,14 @@ public class CreateActivity extends AppCompatActivity {
         builder.setNegativeButton("No", new AlertDialog.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                CreateActivity.super.onBackPressed();
+                AssignmentCreateActivity.super.onBackPressed();
             }
         });
         builder.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 save = true;//saveProduct();//save function
-                CreateActivity.super.onBackPressed();
+                AssignmentCreateActivity.super.onBackPressed();
             }
         });
         builder.create();

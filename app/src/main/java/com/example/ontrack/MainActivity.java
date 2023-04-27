@@ -260,10 +260,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent aintent = new Intent(this, AssignmentActivity.class);
                 startActivity(aintent);
                 return true;
-            case R.id.menu_calendar:
-                //Intent intent = new Intent(this, CreateActivity.class);
-                //startActivity(intent);
-                return true;
             case R.id.menu_weather:
                 Intent ain = new Intent(this, WeatherActivity.class);
                 startActivity(ain);

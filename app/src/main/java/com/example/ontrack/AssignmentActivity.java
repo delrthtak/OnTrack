@@ -3,7 +3,6 @@ package com.example.ontrack;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.util.JsonWriter;
 import android.util.Log;
 import android.view.View;
@@ -167,7 +166,7 @@ public class AssignmentActivity extends AppCompatActivity implements View.OnClic
 
     public void onPressed(View view) {
         Log.d(TAG, "onPressed: Method Starting");
-        Intent aintent = new Intent(this, CreateActivity.class);
+        Intent aintent = new Intent(this, AssignmentCreateActivity.class);
         startActivity(aintent);
     }
 
